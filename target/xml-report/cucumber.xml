@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.306">
+    <testcase classname="US02 Kayıt ve Dogrulama ISlemleri Testi" name="TC08 Verify All Products and product detail page" time="0.085">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given Launch browser........................................................passed
+Then Navigate to url automation.............................................passed
+And Verify that home page is visible successfully...........................passed
+When Click on Products button...............................................undefined
+And Verify user is navigated to ALL PRODUCTS page successfully..............skipped
+And The products list is visible............................................skipped
+And Click on View Product of first product..................................skipped
+And User is landed to product detail page...................................skipped
+And Verify that detail detail is visible: product name, category, price, availability, condition, brand.skipped
+]]>
+        </failure>
+    </testcase>
+</testsuite>
