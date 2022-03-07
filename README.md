@@ -6,3 +6,5 @@ https://www.automationexercise.com/test_cases
 ```
 
 [Test Cases](https://www.automationexercise.com/test_cases)
+
+<a href="https://www.automationexercise.com/test_cases" target="_blank">"Test Cases"</a>
