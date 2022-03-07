@@ -5,7 +5,7 @@ It contains test cases codes belong  automation exercise web site
 https://www.automationexercise.com/test_cases
 ```
 
-<a href="https://www.automationexercise.com/test_cases" target="_blank" style="font-size:10000%;" style="background-color:Dark;" >Test Cases </a>
+<a href="https://www.automationexercise.com/test_cases" target="_blank" style="font-size:100000%;"  >Test Cases </a>
    
                                                                                                             
                                                                                                             
