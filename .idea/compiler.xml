@@ -8,7 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="automationExerciseProject" />
         <module name="Automation-Ex-Project" />
+        <module name="AutomationExerciseProject" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="11" />
   </component>
 </project>

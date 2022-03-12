@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.306">
-    <testcase classname="US02 Kayıt ve Dogrulama ISlemleri Testi" name="TC08 Verify All Products and product detail page" time="0.085">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="9.533">
+    <testcase classname="Register operations" name="Register User" time="9.322">
+        <failure message="Keys to send should be a not null CharSequence" type="java.lang.IllegalArgumentException">
             <![CDATA[Given Launch browser........................................................passed
-Then Navigate to url automation.............................................passed
-And Verify that home page is visible successfully...........................passed
-When Click on Products button...............................................undefined
-And Verify user is navigated to ALL PRODUCTS page successfully..............skipped
-And The products list is visible............................................skipped
-And Click on View Product of first product..................................skipped
-And User is landed to product detail page...................................skipped
-And Verify that detail detail is visible: product name, category, price, availability, condition, brand.skipped
+When Navigate to url AutomationExercise.....................................passed
+Then Verify that home page is visible successfully..........................passed
+And Click on Signup-Login button............................................passed
+And Verify New User Signup! is visible......................................passed
+Then Enter name and email address...........................................failed
+And Click Signup button.....................................................skipped
+Then Verify that ENTER ACCOUNT INFORMATION is visible.......................skipped
+And Fill details: Title, Name, Email, Password, Date of birth...............skipped
+And Select checkbox Sign up for our newsletter!.............................skipped
+And Select checkbox Receive special offers from our partners!...............skipped
+And Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number.skipped
+Then Click (Create Account button)..........................................skipped
+And Verify that "ACCOUNT CREATED!" is visible...............................skipped
+Then Click 'Continue' button................................................skipped
+And Verify that Logged in as username is visible............................skipped
+Then Click Delete Account button............................................skipped
+
+StackTrace:
+java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:92)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy24.sendKeys(Unknown Source)
+	at stepDefinitions.RegisterStepDefinitions.enter_name_and_email_address(RegisterStepDefinitions.java:52)
+	at ✽.Enter name and email address(file:///C:/Users/derdi/eclipse-workspace/AutomationExerciseProject/src/test/resources/features/Register.feature:10)
 ]]>
         </failure>
     </testcase>

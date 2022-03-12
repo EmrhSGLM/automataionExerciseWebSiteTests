@@ -5,7 +5,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-import javax.xml.xpath.XPath;
 
 public class HomePage {
 
@@ -13,45 +12,59 @@ public class HomePage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath="//a[@href='/login']")
+    // Scenario: Register User
+
+    @FindBy (xpath = "//a[@href='/login']")
     public WebElement signUpLoginButtonElement;
 
-    @FindBy(xpath="//a[normalize-space()='Home']")
-    public WebElement homeButtonElement;
+    @FindBy (xpath = "//h2[.='New User Signup!']")
+    public WebElement newUserSignUpTextElement;
 
-    @FindBy(xpath ="//a[@href='/products']")
-    public WebElement productButtonElement;
+    @FindBy (xpath = "//h2[.='Login to your account']")
+    public WebElement loginYourAccountTextElement;
 
-    @FindBy(xpath = "/html[1]/body[1]/header[1]/div[1]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[3]/a[1]")
-    public WebElement cartButtonElement;
+    @FindBy (xpath = "//input[@name='name']")
+    public WebElement newUserLoginNameBoxElement;
 
-    @FindBy(xpath ="//a[normalize-space()='Contact us']")
-    public WebElement contactUsButtonElement;
+    @FindBy (xpath = "//input[@data-qa='signup-email']")
+    public WebElement newUserLoginEmailBoxElement;
 
-    @FindBy(xpath = "//input[@data-qa='login-email']")
-    public WebElement accountEmailBoxElement;
+    @FindBy (xpath = "//button[@data-qa='signup-button']")
+    public WebElement NewUserLoginSignUpButtonElement;
 
-    @FindBy(xpath = "//input[@placeholder='Password']")
-    public WebElement accountPasswordBoxElement;
+   // @FindBy (xpath = "//p[.='Email Address already exist!']")
+  //  public WebElement NewUserLogingirisYapilamadiTextElement;
 
-    @FindBy(xpath = "//input[@placeholder='Name']")
-    public WebElement newUserNameBoxElement;
+    @FindBy (xpath = "//b[.='Enter Account Information']")
+    public WebElement enterAccountInformationTextElement;
 
-    @FindBy(xpath = "//input[@data-qa='signup-email']")
-    public WebElement newEmailBoxElement;
+    @FindBy (xpath = "//input[@id='id_gender1']")
+    public WebElement mrRadioButtontElement;
 
-    @FindBy(xpath = "//button[normalize-space()='Login']")
-    public WebElement accountLoginButtonElement;
-
-    @FindBy(xpath = "//button[normalize-space()='Signup']")
-    public WebElement newUserSignUpButtonElement;
-
-    @FindBy(xpath = "//a[@href='/test_cases']")
-    public WebElement testCasesButtonElement;
+    @FindBy (id = "password")
+    public WebElement newUserPasswordBoxElement;
 
 
+    @FindBy (xpath = "//input[@name='newsletter']")
+    public WebElement signUpForOurNewsLetterBoxElement;
 
 
+    @FindBy (xpath = "//input[@name='optin']")
+    public WebElement specialOffersFromOurPartnersBoxElement;
 
+    @FindBy (xpath = "//input[@name='first_name']")
+    public WebElement firstNameBoxElement;
+
+    @FindBy (xpath = "//button[@data-qa='create-account']")
+    public WebElement createAccountButtonElement;
+
+    @FindBy (tagName = "b")
+    public WebElement accountCreatedTextElement;
+
+    @FindBy (xpath = "//a[.='Continue']")
+    public WebElement continueButtontElement;
+
+    @FindBy (xpath = "//li//a[text()=' Logged in as ']")
+    public WebElement loggedInAsButtontElement;
 
 }

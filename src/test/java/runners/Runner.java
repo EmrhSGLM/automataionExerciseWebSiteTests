@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "stepDefinitions",
         tags = "@emrah",
-        dryRun = true
+        dryRun = false
 )
 public class Runner {
 }
