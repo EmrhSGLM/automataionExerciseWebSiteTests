@@ -64,7 +64,26 @@ public class HomePage {
     @FindBy (xpath = "//a[.='Continue']")
     public WebElement continueButtontElement;
 
-    @FindBy (xpath = "//li//a[text()=' Logged in as ']")
-    public WebElement loggedInAsButtontElement;
+    @FindBy (xpath = "//li//a[@href='/delete_account']")
+    public WebElement deleteButtonElement;
+
+    @FindBy (xpath = "//a[@href='/logout']")
+    public WebElement logoutButtonElement;
+
+    // Scenario:
+
+    @FindBy (xpath = "//h2[.='Login to your account']")
+    public WebElement loginToYourAccount;
+
+    @FindBy (xpath = "//input[@data-qa='login-email']")
+    public WebElement loginEmailBoxElement;
+
+    @FindBy (xpath = "//input[@data-qa='login-password']")
+    public WebElement loginPasswordBoxElement;
+
+    @FindBy (xpath = "//button[@data-qa='login-button']")
+    public WebElement loginSignInButtonElement;
+
+
 
 }

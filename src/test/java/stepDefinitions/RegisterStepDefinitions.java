@@ -12,6 +12,7 @@ import org.openqa.selenium.interactions.Actions;
 import pages.HomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class RegisterStepDefinitions {
 
@@ -120,14 +121,17 @@ public class RegisterStepDefinitions {
     public void clickCreateAccountButton() {
         homePage.createAccountButtonElement.click();
     }
-    @And("Verify that {string} is visible")
-    public void verifyThatLoggedInAsUsernameIsVisible(String createText) {
+
+    @And("Verify that ACCOUNT CREATED! is visible")
+    public void verifyThatACCOUNTCREATEDIsVisible() {
+
         String actualText= homePage.accountCreatedTextElement.getText();
-        Assert.assertEquals(actualText, createText);
+        Assert.assertEquals(actualText, "ACCOUNT CREATED!");
     }
 
-    @Then("Click {string} button")
-    public void click_button(String string) {
+
+    @Then("Click Continue button")
+    public void clickContinueButton() {
         //Driver.getDriver().switchTo().alert().dismiss();
         homePage.continueButtontElement.click();
     }
@@ -138,8 +142,39 @@ public class RegisterStepDefinitions {
 
     @Then("Click Delete Account button")
     public void clickDeleteAccountButton() {
-        homePage.loggedInAsButtontElement.click();
+        homePage.deleteButtonElement.click();
     }
+
+
+    @And("Verify that ACCOUNT DELETED! is visible and click Continue button")
+    public void verifyThatACCOUNTDELETEDIsVisibleAndClickContinueButton() {
+        // Sitede hata var Bu bolum calismiyor
+        Driver.getDriver().navigate().back();
+        homePage.logoutButtonElement.click();
+        ReusableMethods.waitFor(2);
+
+    }
+
+    // Scenario 2
+
+    @Given("Verify Login to your account is visible")
+    public void verify_login_to_your_account_is_visible() {
+        String actualText = homePage.loginToYourAccount.getText();
+        Assert.assertEquals("Login to your account", actualText);
+
+    }
+    @Then("Enter correct email address and password")
+    public void enter_correct_email_address_and_password() {
+        homePage.loginEmailBoxElement.sendKeys(ConfigReader.getProperty("emailEmrah"));
+        homePage.loginPasswordBoxElement.sendKeys(ConfigReader.getProperty("password"));
+    }
+    @Then("Click login button")
+    public void click_login_button() {
+        homePage.loginSignInButtonElement.click();
+
+    }
+
+
 
 
 }

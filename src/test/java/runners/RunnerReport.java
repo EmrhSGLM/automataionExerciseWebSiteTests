@@ -12,5 +12,5 @@ import org.junit.runner.RunWith;
         tags = "@emrah",
         dryRun = false
 )
-public class Runner {
+public class RunnerReport {
 }

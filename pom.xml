@@ -44,6 +44,7 @@
 
 
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -54,7 +55,7 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <skipTests>false</skipTests>
                     <includes>
-                        <include>**/runners/*Runner*.java</include>
+                        <include>**/runners/*TestRunner*.java</include>
                     </includes>
                 </configuration>
             </plugin>
@@ -73,7 +74,7 @@
                     <argLine>-Dfile.encoding=UTF-8</argLine>
                     <useFile>false</useFile>
                     <includes>
-                        <include>**/runners/*TestRunner*.java</include>
+                        <include>**/runners/*RunnerReport*.java</include>
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
@@ -105,4 +106,6 @@
             </plugin>
         </plugins>
     </build>
+
+
 </project>

@@ -1,37 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="9.533">
-    <testcase classname="Register operations" name="Register User" time="9.322">
-        <failure message="Keys to send should be a not null CharSequence" type="java.lang.IllegalArgumentException">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="59.41">
+    <testcase classname="Register operations" name="Register User" time="38.011">
+        <system-out>
             <![CDATA[Given Launch browser........................................................passed
 When Navigate to url AutomationExercise.....................................passed
 Then Verify that home page is visible successfully..........................passed
 And Click on Signup-Login button............................................passed
 And Verify New User Signup! is visible......................................passed
-Then Enter name and email address...........................................failed
-And Click Signup button.....................................................skipped
-Then Verify that ENTER ACCOUNT INFORMATION is visible.......................skipped
-And Fill details: Title, Name, Email, Password, Date of birth...............skipped
-And Select checkbox Sign up for our newsletter!.............................skipped
-And Select checkbox Receive special offers from our partners!...............skipped
-And Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number.skipped
-Then Click (Create Account button)..........................................skipped
-And Verify that "ACCOUNT CREATED!" is visible...............................skipped
-Then Click 'Continue' button................................................skipped
-And Verify that Logged in as username is visible............................skipped
-Then Click Delete Account button............................................skipped
-
-StackTrace:
-java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:92)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at com.sun.proxy.$Proxy24.sendKeys(Unknown Source)
-	at stepDefinitions.RegisterStepDefinitions.enter_name_and_email_address(RegisterStepDefinitions.java:52)
-	at ✽.Enter name and email address(file:///C:/Users/derdi/eclipse-workspace/AutomationExerciseProject/src/test/resources/features/Register.feature:10)
+Then Enter name and email address...........................................passed
+And Click Signup button.....................................................passed
+Then Verify that ENTER ACCOUNT INFORMATION is visible.......................passed
+And Fill details: Title, Name, Email, Password, Date of birth...............passed
+And Select checkbox Sign up for our newsletter!.............................passed
+And Select checkbox Receive special offers from our partners!...............passed
+And Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number.passed
+Then Click (Create Account button)..........................................passed
+And Verify that ACCOUNT CREATED! is visible.................................passed
+Then Click Continue button..................................................passed
+And Verify that Logged in as username is visible............................passed
+Then Click Delete Account button............................................passed
+And Verify that ACCOUNT DELETED! is visible and click Continue button.......passed
 ]]>
-        </failure>
+        </system-out>
+    </testcase>
+    <testcase classname="Register operations" name="Login User with correct email and password" time="20.99">
+        <system-out>
+            <![CDATA[Given Launch browser........................................................passed
+When Navigate to url AutomationExercise.....................................passed
+Then Verify that home page is visible successfully..........................passed
+And Click on Signup-Login button............................................passed
+Given Verify Login to your account is visible...............................passed
+Then Enter correct email address and password...............................passed
+And Click login button......................................................passed
+And Verify that Logged in as username is visible............................passed
+Then Click Delete Account button............................................passed
+And Verify that ACCOUNT DELETED! is visible and click Continue button.......passed
+]]>
+        </system-out>
     </testcase>
 </testsuite>
