@@ -1,41 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="59.41">
-    <testcase classname="Register operations" name="Register User" time="38.011">
-        <system-out>
-            <![CDATA[Given Launch browser........................................................passed
-When Navigate to url AutomationExercise.....................................passed
-Then Verify that home page is visible successfully..........................passed
-And Click on Signup-Login button............................................passed
-And Verify New User Signup! is visible......................................passed
-Then Enter name and email address...........................................passed
-And Click Signup button.....................................................passed
-Then Verify that ENTER ACCOUNT INFORMATION is visible.......................passed
-And Fill details: Title, Name, Email, Password, Date of birth...............passed
-And Select checkbox Sign up for our newsletter!.............................passed
-And Select checkbox Receive special offers from our partners!...............passed
-And Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number.passed
-Then Click (Create Account button)..........................................passed
-And Verify that ACCOUNT CREATED! is visible.................................passed
-Then Click Continue button..................................................passed
-And Verify that Logged in as username is visible............................passed
-Then Click Delete Account button............................................passed
-And Verify that ACCOUNT DELETED! is visible and click Continue button.......passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Register operations" name="Login User with correct email and password" time="20.99">
-        <system-out>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="14.516">
+    <testcase classname="Register operations" name="Login User with incorrect email and password" time="14.226">
+        <failure message="expected:&lt;Your email or password is incorrect!&gt; but was:&lt;[[ChromeDriver: chrome on WINDOWS (f56185670ffc3bbc9eb05a93a71dee05)] -&gt; xpath: //*[.='Your email or password is incorrect!']]&gt;" type="java.lang.AssertionError">
             <![CDATA[Given Launch browser........................................................passed
 When Navigate to url AutomationExercise.....................................passed
 Then Verify that home page is visible successfully..........................passed
 And Click on Signup-Login button............................................passed
 Given Verify Login to your account is visible...............................passed
-Then Enter correct email address and password...............................passed
+And Enter incorrect email address and password..............................passed
 And Click login button......................................................passed
-And Verify that Logged in as username is visible............................passed
-Then Click Delete Account button............................................passed
-And Verify that ACCOUNT DELETED! is visible and click Continue button.......passed
+Then Verify error Your email or password is incorrect! is visible...........failed
+
+StackTrace:
+java.lang.AssertionError: expected:<Your email or password is incorrect!> but was:<[[ChromeDriver: chrome on WINDOWS (f56185670ffc3bbc9eb05a93a71dee05)] -> xpath: //*[.='Your email or password is incorrect!']]]]><![CDATA[>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepDefinitions.RegisterStepDefinitions.verifyErrorYourEmailOrPasswordIsIncorrectIsVisible(RegisterStepDefinitions.java:190)
+	at ✽.Verify error Your email or password is incorrect! is visible(file:///C:/Users/derdi/eclipse-workspace/AutomationExerciseProject/src/test/resources/features/Register.feature:41)
 ]]>
-        </system-out>
+        </failure>
     </testcase>
 </testsuite>

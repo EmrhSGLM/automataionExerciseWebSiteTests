@@ -70,7 +70,7 @@ public class HomePage {
     @FindBy (xpath = "//a[@href='/logout']")
     public WebElement logoutButtonElement;
 
-    // Scenario:
+    // Scenario: Login User with correct email and password
 
     @FindBy (xpath = "//h2[.='Login to your account']")
     public WebElement loginToYourAccount;
@@ -83,6 +83,10 @@ public class HomePage {
 
     @FindBy (xpath = "//button[@data-qa='login-button']")
     public WebElement loginSignInButtonElement;
+
+    // Scenario 3
+    @FindBy (xpath="//*[.='Your email or password is incorrect!']")
+    public WebElement girisYapilamadiTextElement;
 
 
 

@@ -174,6 +174,25 @@ public class RegisterStepDefinitions {
 
     }
 
+    // Scenario 3
+
+    @And("Enter incorrect email address and password")
+    public void enterIncorrectEmailAddressAndPassword() {
+        homePage.loginEmailBoxElement.sendKeys(ConfigReader.getProperty("wrongEmail"));
+        homePage.loginPasswordBoxElement.sendKeys(ConfigReader.getProperty("wrongPassword"));
+        homePage.loginSignInButtonElement.click();
+
+    }
+
+    @Then("Verify error Your email or password is incorrect! is visible")
+    public void verifyErrorYourEmailOrPasswordIsIncorrectIsVisible() {
+        ReusableMethods.waitFor(2);
+        Assert.assertEquals("Your email or password is incorrect!",
+                homePage.girisYapilamadiTextElement.getText());
+    }
+
+
+
 
 
 
