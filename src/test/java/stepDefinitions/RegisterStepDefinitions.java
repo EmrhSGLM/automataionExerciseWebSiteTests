@@ -138,6 +138,9 @@ public class RegisterStepDefinitions {
 
     @And("Verify that Logged in as username is visible")
     public void verifyThatLoggedInAsUsernameIsVisible() {
+        ReusableMethods.waitFor(3);
+        Assert.assertEquals(ConfigReader.getProperty("firstName"),
+                homePage.usernameTextElement.getText());
     }
 
     @Then("Click Delete Account button")
@@ -191,9 +194,16 @@ public class RegisterStepDefinitions {
                 homePage.girisYapilamadiTextElement.getText());
     }
 
+    // Scenario 4
+    @Then("Click Logout button")
+    public void clickLogoutButton() {
+        homePage.logoutButtonElement.click();
+    }
 
-
-
+    @Then("Verify that user is navigated to login page")
+    public void verify_that_user_is_navigated_to_login_page() {
+        Assert.assertTrue(homePage.loginToYourAccount.isDisplayed());
+    }
 
 
 }

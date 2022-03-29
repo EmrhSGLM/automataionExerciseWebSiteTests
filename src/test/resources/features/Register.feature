@@ -33,9 +33,17 @@ Feature: Register operations
     Then Click Delete Account button
     And Verify that ACCOUNT DELETED! is visible and click Continue button
 
-  @emrah
+
   Scenario: Login User with incorrect email and password
     Given Verify Login to your account is visible
     And Enter incorrect email address and password
     And Click login button
     Then Verify error Your email or password is incorrect! is visible
+  @emrah
+  Scenario: Logout User
+    Given Verify Login to your account is visible
+    Then Enter correct email address and password
+    And Click login button
+    And Verify that Logged in as username is visible
+    Then Click Logout button
+    And Verify that user is navigated to login page

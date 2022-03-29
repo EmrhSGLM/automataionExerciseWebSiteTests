@@ -88,6 +88,11 @@ public class HomePage {
     @FindBy (xpath="//*[.='Your email or password is incorrect!']")
     public WebElement girisYapilamadiTextElement;
 
+    // Scenario4
+    @FindBy (xpath = "//li//b[.='Emrah']")
+    public WebElement usernameTextElement;
+
+
 
 
 }
