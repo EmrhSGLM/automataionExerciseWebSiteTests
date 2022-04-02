@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.431">
-    <testcase classname="Register operations" name="Logout User" time="0.113">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.465">
+    <testcase classname="Contact Us Form operation" name="TC_06 Contact Us Form Testing" time="0.126">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given Launch browser........................................................passed
-When Navigate to url AutomationExercise.....................................passed
-Then Verify that home page is visible successfully..........................passed
-And Click on Signup-Login button............................................passed
-Given Verify Login to your account is visible...............................passed
-Then Enter correct email address and password...............................passed
-And Click 'login' button....................................................undefined
-And Verify that 'Logged in as username' is visible..........................skipped
-Then Click 'Logout' button..................................................skipped
-And Verify that user is navigated to login page.............................skipped
+Then Navigate to url AutomationExercise.....................................passed
+And Verify that home page is visible successfully...........................passed
+And Click on Contact Us button..............................................passed
+And Verify GET IN TOUCH is visible..........................................passed
+Then Enter name, email, subject and message.................................passed
+Then Upload file............................................................passed
+And Click Submit button.....................................................passed
+And Click OK button.........................................................passed
+Then Verify success message Success! Your details have been submitted successfully. is visible.undefined
+Then Click Home button and verify that landed to home page successfully.....skipped
 ]]>
         </failure>
     </testcase>

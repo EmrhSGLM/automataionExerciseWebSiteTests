@@ -92,7 +92,8 @@ public class HomePage {
     @FindBy (xpath = "//li//b[.='Emrah']")
     public WebElement usernameTextElement;
 
-
-
+    // scenario 5
+    @FindBy (xpath = "//p[.='Email Address already exist!']")
+    public WebElement emailAddressAlreadyExistTextElement;
 
 }

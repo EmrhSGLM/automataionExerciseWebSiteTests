@@ -8,7 +8,7 @@ Feature: Register operations
     And Click on Signup-Login button
 
 
-  Scenario: Register User
+  Scenario: TC_01 Register User
     And Verify New User Signup! is visible
     Then Enter name and email address
     And Click Signup button
@@ -25,7 +25,7 @@ Feature: Register operations
     And Verify that ACCOUNT DELETED! is visible and click Continue button
 
 
-  Scenario:  Login User with correct email and password
+  Scenario:  TC_02 Login User with correct email and password
     Given Verify Login to your account is visible
     Then Enter correct email address and password
     And Click login button
@@ -34,16 +34,24 @@ Feature: Register operations
     And Verify that ACCOUNT DELETED! is visible and click Continue button
 
 
-  Scenario: Login User with incorrect email and password
+  Scenario: TC_03 Login User with incorrect email and password
     Given Verify Login to your account is visible
     And Enter incorrect email address and password
     And Click login button
     Then Verify error Your email or password is incorrect! is visible
-  @emrah
-  Scenario: Logout User
+
+
+  Scenario: TC_04 Logout User
     Given Verify Login to your account is visible
     Then Enter correct email address and password
     And Click login button
     And Verify that Logged in as username is visible
     Then Click Logout button
     And Verify that user is navigated to login page
+
+
+  Scenario: TC_05 Register User with existing email
+    Given Verify New User Signup! is visible
+    Then Enter name and already registered email address
+    And Click Signup button
+    Then Verify error Email Address already exist! is visible

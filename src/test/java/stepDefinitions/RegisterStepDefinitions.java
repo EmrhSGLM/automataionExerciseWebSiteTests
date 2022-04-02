@@ -205,5 +205,17 @@ public class RegisterStepDefinitions {
         Assert.assertTrue(homePage.loginToYourAccount.isDisplayed());
     }
 
+    // scenario 5
+    @Then("Enter name and already registered email address")
+    public void enter_name_and_already_registered_email_address() {
+        homePage.newUserLoginNameBoxElement.sendKeys("Jack007");
+        homePage.newUserLoginEmailBoxElement.sendKeys(ConfigReader.getProperty("emailEmrah"));
+        homePage.NewUserLoginSignUpButtonElement.click();
+    }
+    @Then("Verify error Email Address already exist! is visible")
+    public void verify_error_email_address_already_exist_is_visible() {
+     Assert.assertEquals("Email Address already exist!",homePage.emailAddressAlreadyExistTextElement.getText());
+    }
+
 
 }
