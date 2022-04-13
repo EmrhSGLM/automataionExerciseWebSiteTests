@@ -96,4 +96,15 @@ public class HomePage {
     @FindBy (xpath = "//p[.='Email Address already exist!']")
     public WebElement emailAddressAlreadyExistTextElement;
 
+    @FindBy (xpath = "//a[@href='/test_cases']")
+    public WebElement testCasesButtonElement;
+
+    // testCasesPage
+    @FindBy (xpath = "//b[.='Test Cases']")
+    public WebElement testCasesTextElement;
+
+    // product
+    @FindBy (xpath="//a[@href='/products']")
+    public WebElement productsButtonElement;
+
 }

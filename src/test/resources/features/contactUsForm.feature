@@ -1,5 +1,5 @@
 Feature: Contact Us Form operation
-  @emrah
+
   Scenario: TC_06 Contact Us Form Testing
     Given Launch browser
     Then Navigate to url AutomationExercise

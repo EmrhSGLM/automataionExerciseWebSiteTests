@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.465">
-    <testcase classname="Contact Us Form operation" name="TC_06 Contact Us Form Testing" time="0.126">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.429">
+    <testcase classname="Products and product Operation" name="TC_08 Verify All Products and product detail page" time="0.114">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given Launch browser........................................................passed
-Then Navigate to url AutomationExercise.....................................passed
-And Verify that home page is visible successfully...........................passed
-And Click on Contact Us button..............................................passed
-And Verify GET IN TOUCH is visible..........................................passed
-Then Enter name, email, subject and message.................................passed
-Then Upload file............................................................passed
-And Click Submit button.....................................................passed
-And Click OK button.........................................................passed
-Then Verify success message Success! Your details have been submitted successfully. is visible.undefined
-Then Click Home button and verify that landed to home page successfully.....skipped
+When Navigate to url AutomationExercise.....................................passed
+Then Verify that home page is visible successfully..........................passed
+And Click on Product button.................................................passed
+Given Verify user is navigated to ALL PRODUCTS page successfully............undefined
+And The products list is visible............................................skipped
+Then Click on 'View Product' of first product...............................skipped
+And User is landed to product detail page...................................skipped
+Then Verify that detail detail is visible: product name, category, price, availability, condition, brand.skipped
 ]]>
         </failure>
     </testcase>
