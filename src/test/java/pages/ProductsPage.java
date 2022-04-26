@@ -38,5 +38,40 @@ public class ProductsPage {
    @FindBy(xpath="//b[.='Brand:']")
     public WebElement firstBrandTextElement;
 
+   @FindBy(xpath="//input[@id='search_product']")
+    public WebElement searchBoxElement;
+
+   @FindBy(xpath="//button[@id='submit_search']")
+    public WebElement searchButtonElement;
+
+   @FindBy(xpath="//h2[@class='title text-center']")
+    public WebElement searchedProductsTextElement;
+
+   @FindBy(xpath="//p[.='Pure Cotton V-Neck T-Shirt']")
+    public WebElement firstProductTextElement;
+
+   @FindBy(xpath="//p[.='Green Side Placket Detail T-Shirt']")
+    public WebElement secondProductTextElement;
+
+   @FindBy(xpath="//p[.='Premium Polo T-Shirts']")
+    public WebElement thirdProductTextElement;
+
+   // TC_12
+
+    @FindBy (xpath="//a[@data-product-id='1']")
+    public WebElement firstAddToCartElement;
+
+    @FindBy (xpath="//button[.='Continue Shopping']")
+    public WebElement continueButtontElement;
+
+    @FindBy (xpath="//a[@data-product-id='2']")
+    public WebElement secondAddToCartElement;
+
+    @FindBy (xpath="//a[@href='/view_cart']")
+    public WebElement viewCartButtonElement;
+
+    @FindBy (xpath="//td[@class='cart_product']")
+    public WebElement cartAllProductElement;
+
 
 }

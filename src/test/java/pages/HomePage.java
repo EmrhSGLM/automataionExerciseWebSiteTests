@@ -107,4 +107,21 @@ public class HomePage {
     @FindBy (xpath="//a[@href='/products']")
     public WebElement productsButtonElement;
 
+    // TC_010
+    @FindBy (xpath="//h2[.='Subscription']")
+    public WebElement subscriptionTextElement;
+
+    @FindBy (id="susbscribe_email")
+    public WebElement subscripeEmailBoxElement;
+
+    @FindBy (xpath="//button[@type='submit']")
+    public WebElement subscripeEmailButtonElement;
+
+    @FindBy (xpath="//div[.='You have been successfully subscribed!']")
+    public WebElement successfullySubscripeTextElement;
+
+    // TC_11
+    @FindBy (xpath = "(//a[@href='/view_cart'])[1]")
+    public WebElement cartButtonElement;
+
 }
